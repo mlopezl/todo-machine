@@ -1,40 +1,37 @@
 .Icon-container {
-  cursor: pointer;
+  position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
-  font-size: 24px;
-  font-weight: bold;
-  /* background-color: #CCC; */
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 180ms ease;
 }
 
 .Icon-container-check {
-  position: absolute;
   left: 12px;
-}
-.Icon-container-check--active {
-  color: #4caf50;
 }
 
 .Icon-container-delete {
-  position: absolute;
-  top: -24px;
-  right: 0;
+  right: 12px;
 }
-.Icon-container-delete:hover {
-  color: red;
+
+.Icon-container:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .Icon-svg {
-  width: 24px;
-  height: 24px;
+  width: 17px;
+  height: 17px;
+  transition: fill 180ms ease;
 }
 
 .Icon-container-check:hover .Icon-svg {
-  fill: green;
+  fill: var(--success);
 }
+
 .Icon-container-delete:hover .Icon-svg {
-  fill: red;
+  fill: var(--danger);
 }

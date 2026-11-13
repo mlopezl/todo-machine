@@ -1,20 +1,52 @@
 .TodoItem {
-  background-color: #FAFAFA;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  min-height: 76px;
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.TodoItem:hover {
+  border-color: #7990a8;
+  background: var(--surface-hover);
+}
+
+.TodoItem::before {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--accent);
+  content: '';
+}
+
+.TodoItem:nth-child(3n + 2)::before {
+  background: var(--success);
+}
+
+.TodoItem:nth-child(3n)::before {
+  background: var(--warm);
 }
 
 .TodoItem-p {
-  margin: 24px 0 24px 24px;
-  width: calc(100% - 120px);
-  font-size: 18px;
-  line-height: 24px;
+  width: calc(100% - 128px);
+  margin: 20px 64px;
+  color: var(--text);
+  font-size: 15px;
   font-weight: 400;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
+
 .TodoItem-p--complete {
+  color: var(--muted);
   text-decoration: line-through;
+  text-decoration-color: var(--muted);
 }

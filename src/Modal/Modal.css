@@ -1,12 +1,10 @@
 .ModalBackground {
-  background-color: rgba(32,35,41,.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 10, 17, 0.78);
+  backdrop-filter: blur(5px);
 }

@@ -1,5 +1,13 @@
 .TodoList {
   margin: 0;
-  padding: 0 0 56px 0;
+  padding: 6px 0 112px;
   list-style: none;
+}
+
+.TodoList > p {
+  margin: 30px 4px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
 }

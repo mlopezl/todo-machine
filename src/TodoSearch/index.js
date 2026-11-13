@@ -10,7 +10,8 @@ function TodoSearch() {
   
   return (
     <input
-      placeholder="Cortar cebolla"
+      placeholder="Search programming tasks"
+      aria-label="Search tasks"
       className="TodoSearch"
       value={searchValue}
       onChange={(event) => {

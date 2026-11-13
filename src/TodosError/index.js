@@ -2,7 +2,7 @@ import React from 'react';
 
 function TodosError() {
   return (
-    <p>Error...</p>
+    <p>Unable to load your tasks.</p>
   );
 }
 

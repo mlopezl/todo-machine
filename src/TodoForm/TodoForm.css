@@ -1,71 +1,94 @@
 form {
-  width: 90%;
-  max-width: 300px;
-  background-color: #fff;
-  padding: 33px 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  width: min(100% - 32px, 440px);
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #405168;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
 }
 
 label {
-  text-align: center;
-  font-weight: bold;
+  margin-bottom: 22px;
+  color: var(--text);
   font-size: 20px;
-  color: #1E1E1F;
-  margin-bottom: 26px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
 }
 
 textarea {
-  background-color: #F9FBFC;
-  border: 2px solid #202329;
-  border-radius: 2px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  color: #1E1E1F;
-  font-size: 20px;
-  text-align: center;
-  padding: 12px;
-  height: 96px;
-  width: calc(100% - 25px);
+  width: 100%;
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  background: #2b394b;
+  color: var(--text);
+  font: 400 15px/1.5 'Montserrat', Arial, sans-serif;
+  resize: vertical;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 textarea::placeholder {
-  color: #A5A5A5;
-  font-family: 'Montserrat';
-  font-weight: 400;
+  color: var(--muted);
+  opacity: 1;
 }
 
 textarea:focus {
-  outline-color: #61DAFA;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(155, 191, 240, 0.14);
 }
 
 .TodoForm-buttonContainer {
-  margin-top: 14px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
   width: 100%;
+  margin-top: 24px;
 }
 
 .TodoForm-button {
+  min-width: 112px;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
   cursor: pointer;
-  display: inline-block;
-  font-size: 20px;
-  color: #202329;
-  font-weight: 400;
-  width: 120px;
-  height: 48px;
-  border-radius: 2px;
-  border: none;
-  font-family: 'Montserrat';
+  font: 700 13px 'Montserrat', Arial, sans-serif;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.TodoForm-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .TodoForm-button--add {
-  background: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  background: var(--accent);
+  color: #17191d;
+}
+
+.TodoForm-button--add:hover {
+  background: #bad4f5;
 }
 
 .TodoForm-button--cancel {
+  border-color: var(--border);
   background: transparent;
+  color: var(--muted);
+}
+
+.TodoForm-button--cancel:hover {
+  border-color: #8193a8;
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 26px 22px;
+  }
 }

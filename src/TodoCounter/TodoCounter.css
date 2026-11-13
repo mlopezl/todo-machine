@@ -1,11 +1,25 @@
 .TodoCounter {
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
-    padding: 48px;
-    font-weight: normal;
+  margin: 0;
+  padding: 76px 0 32px;
+  color: var(--muted);
+  font-size: clamp(20px, 4vw, 27px);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: -0.035em;
 }
 
 .TodoCounter span {
-  font-weight: bold;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.TodoCounter span:first-of-type {
+  color: var(--warm);
+}
+
+@media (max-width: 480px) {
+  .TodoCounter {
+    padding-top: 52px;
+  }
 }

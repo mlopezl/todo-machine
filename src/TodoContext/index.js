@@ -3,13 +3,19 @@ import { useLocalStorage } from './useLocalStorage';
 
 const TodoContext = React.createContext();
 
+const exampleTodos = [
+  // { text: 'Build a responsive navigation menu', completed: false },
+  // { text: 'Write unit tests for the login form', completed: false },
+  // { text: 'Fix the API error handling', completed: false },
+];
+
 function TodoProvider({ children }) {
   const {
     item: todos,
     saveItem: saveTodos,
     loading,
     error,
-  } = useLocalStorage('TODOS_V1', []);
+  } = useLocalStorage('TODOS_V1', exampleTodos);
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
 
